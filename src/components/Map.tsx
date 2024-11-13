@@ -15,7 +15,7 @@ const Map = () => {
     <section className="w-full py-12 bg-granite-50">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-display text-granite-800 mb-8 text-center">Visit Our Showroom</h2>
-        <LoadScript googleMapsApiKey={process.env.VITE_GOOGLE_MAPS_API_KEY || ''}>
+        <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ''}>
           <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
