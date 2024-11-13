@@ -1,4 +1,3 @@
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import { useToast } from "@/components/ui/use-toast";
 
 const Map = () => {
