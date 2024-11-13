@@ -1,0 +1,77 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    width: 100%;
+    overflow-hidden: hidden;
+  }
+  
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d');
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .hero-container {
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .hero-content {
+    max-width: 42rem;
+    animation: fadeIn 1s ease-in-out;
+    color: white;
+  }
+  
+  .hero-title {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 4rem;
+    }
+  }
+  
+  .hero-text {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.75;
+  }
+  
+  .hero-button {
+    border-radius: 9999px;
+    background-color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #2d3748; /* Tailwind's granite-800 */
+    transition: background-color 0.3s;
+  }
+  
+  .hero-button:hover {
+    background-color: #e2e8f0; /* Tailwind's granite-100 */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

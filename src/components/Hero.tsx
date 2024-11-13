@@ -1,27 +1,32 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+import './Hero.css'; // Import the CSS file for Hero component
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleViewWorkClick = () => {
+    navigate('/project');
+  };
+
   return (
-    <div className="relative h-screen min-h-[600px] w-full overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1600585154526-990dced4db0d')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40" />
+    <div className="hero">
+      <div className="hero-background">
+        <div className="hero-overlay" />
       </div>
-      <div className="container relative flex h-full items-center">
-        <div className="max-w-2xl animate-fadeIn text-white">
-          <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
+      <div className="hero-container container">
+        <div className="hero-content">
+          <h1 className="hero-title">
             Crafting Timeless Beauty in Stone
           </h1>
-          <p className="mb-8 text-xl leading-relaxed">
+          <p className="hero-text">
             Premium granite installations that transform your space into a
             masterpiece of elegance and durability.
           </p>
-          <button className="rounded-full bg-white px-8 py-3 text-lg font-semibold text-granite-800 transition-colors hover:bg-granite-100">
+          <button
+            onClick={handleViewWorkClick}
+            className="hero-button"
+          >
             View Our Work
           </button>
         </div>

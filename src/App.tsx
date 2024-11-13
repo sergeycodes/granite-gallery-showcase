@@ -4,6 +4,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Navbar from './components/Navbar';
+import Project from './components/Project'; 
+
+
 
 const queryClient = new QueryClient();
 
@@ -13,8 +17,11 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <Navbar /> {/* Add the Navbar component here */}
+
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/project" element={<Project />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

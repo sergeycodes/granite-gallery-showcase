@@ -10,7 +10,9 @@ const Index = () => {
       <Hero />
       <Gallery />
       <Team />
-      <Map />
+      <section id="contact">
+        <Map />
+      </section>
     </main>
   );
 };
