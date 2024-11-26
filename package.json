@@ -1,5 +1,5 @@
 {
-  "homepage": "https://sergeycodes.github.io/granite-gallery-showcase",
+  "homepage": "https://sergeycodes.github.io/granite-gallery-showcase/",
   "name": "vite_react_shadcn_ts",
   "private": true,
   "version": "0.0.0",
@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "main -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
