@@ -1,16 +1,24 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 interface ProjectCardProps {
-  image: string;
+  id: number;
+  mainImage: string;
   title: string;
   description: string;
 }
 
-const ProjectCard = ({ image, title, description }: ProjectCardProps) => {
+const ProjectCard = ({ id, mainImage, title, description }: ProjectCardProps) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/project/${id}`);
+  };
+
   return (
-    <div className="project-card">
+    <div className="project-card cursor-pointer" onClick={handleClick}>
       <img
-        src={image}
+        src={mainImage}
         alt={title}
         className="h-64 w-full object-cover md:h-72"
       />

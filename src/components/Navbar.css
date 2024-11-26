@@ -1,37 +1,50 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent;
-    backdrop-filter: blur(10px);
-    z-index: 50;
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    max-width: 1756px;
-    margin: 0 auto;
-  }
-  
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* 1px black outline */
-  }
-  
-  .navbar-links a {
-    color: white;
-    margin-left: 1rem;
-    text-decoration: none;
-    transition: color 0.3s;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* 1px black outline */
-  }
-  
-  .navbar-links a:hover {
-    color: #d1d5db; /* Tailwind's gray-300 */
-  }
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1); /* Add a semi-transparent background color */
+  z-index: 50;
+  transition: top 0.3s; /* Smooth transition for showing/hiding the navbar */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the navbar */
+}
+
+.navbar.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.navbar-container.max-width {
+  max-width: 1200px; /* Set the maximum width for the navbar container */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* 1px black outline */
+}
+
+.navbar-links a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* 1px black outline */
+}
+
+.navbar-links a:hover {
+  color: #d1d5db; /* Tailwind's gray-300 */
+}
