@@ -7,8 +7,6 @@ import Index from "./pages/Index";
 import Navbar from './components/Navbar';
 import Project from './components/Project'; 
 
-
-
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -16,9 +14,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-      <Navbar /> {/* Add the Navbar component here */}
-
+      <BrowserRouter basename="/granite-gallery-showcase"> {/* Set the basename for BrowserRouter */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/project" element={<Project />} />

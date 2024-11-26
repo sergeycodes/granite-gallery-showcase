@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/granite-gallery-showcase/',
+  base: '/granite-gallery-showcase/', // Set the base path to your repository name
   server: {
     host: "::",
     port: 8080,
