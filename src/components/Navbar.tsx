@@ -4,10 +4,11 @@ import './Navbar.css';
 
 const Navbar = () => {
     const navigate = useNavigate();
+    const basePath = '/granite-gallery-showcase';
 
     const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
-        navigate('/');
+        navigate(`${basePath}/`);
         setTimeout(() => {
             document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
         }, 100); // Delay to ensure the page has navigated before scrolling
@@ -15,7 +16,7 @@ const Navbar = () => {
 
     const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
-        navigate('/');
+        navigate(`${basePath}/`);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
@@ -24,10 +25,10 @@ const Navbar = () => {
         <div className="navbar-container">
           <div className="navbar-brand">Brand</div>
           <div className="navbar-links">
-            <Link to="/" onClick={handleHomeClick}>Home</Link>
-            <Link to="/project">Project</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact" onClick={handleContactClick}>Contact</Link>
+            <Link to={`${basePath}/`} onClick={handleHomeClick}>Home</Link>
+            <Link to={`${basePath}/project`}>Project</Link>
+            <Link to={`${basePath}/about`}>About</Link>
+            <Link to={`${basePath}/contact`} onClick={handleContactClick}>Contact</Link>
           </div>
         </div>
       </nav>
