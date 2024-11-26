@@ -1,126 +1,142 @@
 .project-details-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 5rem; /* Add padding to the top to create space for the navbar */
-  }
-  
-  .project-not-found {
-    padding-top: 5rem; /* Add padding to the top to create space for the navbar */
-    text-align: center;
-    font-size: 1.5rem;
-    color: #333; /* Use a neutral color for the text */
-  }
-  
-  .project-not-found .error-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .project-not-found h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .project-not-found p {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .project-not-found a {
-    color: #007bff; /* Use a blue color for the link */
-    text-decoration: none;
-  }
-  
-  .project-not-found a:hover {
-    text-decoration: underline;
-  }
-  
-  .project-details-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    text-align: left;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 5rem; /* Add padding to the top to create space for the navbar */
+}
+
+.project-not-found {
+  padding-top: 5rem; /* Add padding to the top to create space for the navbar */
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333; /* Use a neutral color for the text */
+}
+
+.project-not-found .error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.project-not-found h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.project-not-found p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-not-found a {
+  color: #007bff; /* Use a blue color for the link */
+  text-decoration: none;
+}
+
+.project-not-found a:hover {
+  text-decoration: underline;
+}
+
+.project-details-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.project-details-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-details-main-image {
+  height: 532px; /* Set a fixed height for the main image */
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem; /* Add border radius to the main image */
+}
+
+.project-details-image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.project-details-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.project-details-image-wrapper.image-2 .project-details-image {
+  border-top-right-radius: 0.5rem; /* Add border radius to the top-right corner of the second image */
+}
+
+.project-details-image-wrapper.image-4 .project-details-image {
+  border-bottom-right-radius: 0.5rem; /* Add border radius to the bottom-right corner of the fourth image */
+}
+
+.project-details-info {
+  grid-column: span 4;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-details-info h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.project-details-info p {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
   .project-details-grid {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
-    max-height: 532px;
-    width: calc(2 * 532px + 1rem * 3); /* 2 times the height plus the gaps */
   }
-  
+
   .project-details-main-image {
     grid-column: span 2;
     grid-row: span 2;
-    height: 532px; /* Set a fixed height for the main image */
+    height: 532px; /* Ensure the main image remains a fixed height on larger screens */
   }
-  
-  .main-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-top-left-radius: 0.5rem; /* Add border radius to the top-left corner */
-    border-bottom-left-radius: 0.5rem; /* Add border radius to the bottom-left corner */
-  }
-  
+
   .project-details-image-wrapper {
-    width: 100%;
-    height: 100%;
+    height: calc(532px / 2 - 0.5rem); /* Adjust the height for the smaller images to account for the gaps */
   }
-  
-  .project-details-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .project-details-image-wrapper.image-2 .project-details-image {
-    border-top-right-radius: 0.5rem; /* Add border radius to the top-right corner of the second image */
-  }
-  
-  .project-details-image-wrapper.image-4 .project-details-image {
-    border-bottom-right-radius: 0.5rem; /* Add border radius to the bottom-right corner of the fourth image */
-  }
-  
+
   .project-details-info {
     grid-column: span 4;
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
-  .project-details-info h2 {
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+}
+
+
+@media (max-width: 767px) {
+  .project-details-title {
+    font-size: 1.75rem; /* Make the title font smaller on mobile view */
+    margin-left: 1px;
+
   }
-  
-  .project-details-info p {
-    font-size: 1rem;
-    color: #4a4a4a;
-    margin-bottom: 1rem;
+
+  .project-details-main-image {
+    margin-left: 1px;
+
   }
-  
-  @media (min-width: 768px) {
-    .project-details-grid {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-    }
-  
-    .project-details-main-image {
-      grid-column: span 2;
-      grid-row: span 2;
-      height: 532px; /* Ensure the main image remains a fixed height on larger screens */
-    }
-  
-    .project-details-image-wrapper {
-      height: calc(532px / 2 - 0.5rem); /* Adjust the height for the smaller images to account for the gaps */
-    }
-  
-    .project-details-info {
-      grid-column: span 4;
-    }
+
+  .main-image {
+    border-radius: 0.5rem; /* Add border radius to the main image */
   }
+
+  .project-details-image-wrapper {
+    display: none; /* Hide the smaller images */
+  }
+}
