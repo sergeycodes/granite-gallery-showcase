@@ -1,27 +1,6 @@
 import React, { useEffect } from 'react';
 import ProjectCard from './ProjectCard';
-
-const projects = [
-  {
-    id: 1,
-    mainImage: "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
-    title: "Modern Kitchen Renovation",
-    description: "Elegant black granite countertops with waterfall edges",
-  },
-  {
-    id: 2,
-    mainImage: "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
-    title: "Luxury Bathroom",
-    description: "White marble vanity with custom-cut granite details",
-  },
-  {
-    id: 3,
-    mainImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-    title: "Contemporary Living",
-    description: "Stunning granite fireplace surround and accent walls",
-  },
-  // Add more projects here
-];
+import { projects } from '../data/projects'; // Import the projects
 
 const Project = () => {
   useEffect(() => {
